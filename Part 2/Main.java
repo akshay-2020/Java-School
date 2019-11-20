@@ -2,27 +2,19 @@ public class Main {
 
 
 	public static void main(String args[]){
-		Subject subject = new Subject(1,2,3); //id specialism duration
-		subject.setDescription("Course description");
-		String name = subject.getDescription();
-		System.out.println(name);
+		Subject subject1 = new Subject(1, 2, 3);
+		Subject subject2 = new Subject(2, 3, 4);
+		Course  course1 = new Course(subject1, 2);
+		Student student1 = new Student("Alice", 'F', 25);
+		Student student2 = new Student("Bob", 'M', 30);
+		Student student3 = new Student("Charlie", 'M', 35);
+		Student student4 = new Student("Donna", 'F', 40);
 
-		Course course = new Course(subject, 2); // subject untilstart
-		System.out.println(course.getDaysToRun());
-		/*System.out.println(course.getStatus());
-		course.aDayPasses();
-		System.out.println(course.getStatus());
-		course.aDayPasses();
-		System.out.println(course.getStatus());
-		course.aDayPasses();
-		System.out.println(course.getStatus());
-		course.aDayPasses();
-		System.out.println(course.getStatus());
-		course.aDayPasses();
-		System.out.println(course.getStatus());
-		course.aDayPasses();
-		System.out.println(course.getStatus());	*/
-		
+		boolean enrolled;
+		enrolled = course1.enrolStudent(student1);
+
+		System.out.println(enrolled);
+
 
 
 
