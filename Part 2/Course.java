@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class Course {
 	private Subject subject;
-	private int daysUntilStarts;
+	public int daysUntilStarts;
 	private int daysToRun; //how long the subjects will be 
-	private Student[] students = new Student[3];
+	private Student students[] = new Student[3];
 
 	public Course(Subject subject, int daysStart) {
 
@@ -19,7 +19,6 @@ public class Course {
 		if(daysUntilStarts <=0){
 			System.out.println("Course has already started");
 			return false;
-
 		}
 
 		
@@ -27,7 +26,8 @@ public class Course {
 
 			if(element == null){
 				System.out.println("Added Student");
-				students[getSize()] = enrol;
+				int i = getSize();
+				students[i] = enrol;
 				return true;
 			}
 		} 
@@ -44,13 +44,15 @@ public class Course {
 		int index = 0;
 
 		for(Student element: students){
-			if(element == null){
+			if(element != null){
 				index++;
 			}
 
 		}
 		return index;
 	}
+
+
 
 	public Student[] getStudents() {
 		return students;
@@ -74,18 +76,28 @@ public class Course {
 		}
 	}
 
+
 	public void aDayPasses(){
 		if(daysUntilStarts > 0){
 			this.daysUntilStarts -= 1;
 		}else if(daysToRun > 0){
 			this.daysToRun -= 1;
-		}else if(daysToRun == 0){
-			for(Student element: students){
-				element.graduate(subject);
+		} 
 
+		if(daysToRun == 0){
 
+			
+			for(int i = 0; i<getSize(); i++){
+				if(students[i] ==  null){
+					System.out.println("no one there...");
+
+				} else if(students[i].hasCertificate(subject) != true){
+				  	students[i].graduate(subject);
+				}
 			}
+		
+		}	
 
-		}
+		
 	}
 }

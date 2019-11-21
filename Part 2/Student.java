@@ -11,7 +11,16 @@ public class Student extends Person {
 	}
 
 	public void graduate(Subject addID) {
-		this.certificates.add(addID.getID());
+
+	System.out.println("************************");
+		System.out.println(addID.getID());
+		System.out.println(certificates);
+		//hasCertificate(addID);
+			this.certificates.add(addID.getID());
+		
+		System.out.println(certificates);
+		System.out.println("************************");
+		
 
 
 	}
@@ -21,16 +30,44 @@ public class Student extends Person {
 	}
 
 	public boolean hasCertificate(Subject checkCertificate) {
+		boolean check = false;
+		boolean oldAndNew = false;
+		boolean empty = true;
 
-		for(int element: certificates){
-			if(element != checkCertificate.getID()) {
-				this.certificates.add(checkCertificate.getID());
-				return true;
+		if(certificates.isEmpty() == empty){
+			System.out.println("New Certificate");
+			check = false;
+
 			}
 
-		}
+		for(int element: certificates){
 
-		return false;
+
+			if(element == checkCertificate.getID()){
+				System.out.println("Already got it");
+				check = true;
+				oldAndNew = true;
+			} else if(element != checkCertificate.getID()) {
+				//this.certificates.add(checkCertificate.getID());
+				System.out.println("New Certificate");
+				check = false;
+				   }
+
+			
+
+			
+
+
+		}
+		
+		if(check != oldAndNew){
+			check = true;
+		} 
+		System.out.println(check);
+		return check;
+		
+
+		
 
 
 	}

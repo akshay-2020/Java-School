@@ -23,6 +23,7 @@ public class Person{
 
         //Sets age
         public void setAge(int age) {
+        	this.age = age;
 
         }
 
