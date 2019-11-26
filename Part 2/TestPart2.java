@@ -294,14 +294,14 @@ public class TestPart2 {
 		enrolled = course1.enrolStudent(student2);
 		assertTrue(enrolled, "Must be able to enrol Student2");
 		students = course1.getStudents();
-		assertCollection("Incorrect students for Course1", students, student1, student2);
-		assertEquals(2, course1.getSize(), "Incorrect size for Course1");
+		assertCollection("Incorrect students for Course1 bh", students, student1, student2);
+		assertEquals(2, course1.getSize(), "Incorrect size for Course1 ");
 		
 		course1.aDayPasses();
 		enrolled = course1.enrolStudent(student3);
 		assertFalse(enrolled, "Must not be able to enrol Student2");
 		students = course1.getStudents();
-		assertCollection("Incorrect students for Course1", students, student1, student2);
+		assertCollection("Incorrect students for Course1 after 3", students, student1, student2);
 		assertEquals(2, course1.getSize(), "Incorrect size for Course1");
 	}
 	

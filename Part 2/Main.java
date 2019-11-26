@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Main {
 
 
@@ -10,104 +11,7 @@ public class Main {
 		Student student3 = new Student("Charlie", 'M', 35);
 		Student student4 = new Student("Donna", 'F', 40);
 
-		/*//boolean enrolled;
-		Student[] students = course1.getStudents();
-		System.out.println(course1.getSize());
-		course1.enrolStudent(student1);
-		System.out.println(course1.getSize());
-		System.out.println(course1.getStudents());
-		course1.enrolStudent(student2);
-		System.out.println(course1.getSize());
-		System.out.println(course1.getStudents());
-		course1.enrolStudent(student3);
-		System.out.println(course1.getSize());
-		System.out.println(course1.getStudents());*/
-
-		/*enrolled = course1.enrolStudent(student4);
-		System.out.println(enrolled);*/
-
-		/*System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-
-		System.out.println(course1.daysUntilStarts);*/
-
-		/*student1.graduate(subject1);*/
-		/*student1.hasCertificate(subject1);*/
-		/*student1.graduate(subject1);*/
-		/*student1.hasCertificate(subject1);*/
-		/*student1.graduate(subject2);*/
-		/*student1.hasCertificate(subject2);*/
-
-/**/
-
-
-
-
-/*
-		course1.enrolStudent(student1);
-		course1.enrolStudent(student2);
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		student1.hasCertificate(subject1);
-		student2.hasCertificate(subject1);
-		course1.aDayPasses();
-		System.out.println(course1.getStatus());
-		student1.hasCertificate(subject1);
-		student2.hasCertificate(subject1);*/
-
-
-
-		/*student1.graduate(subject1);
-		student1.hasCertificate(subject1);
-		student1.graduate(subject2);
-		student1.hasCertificate(subject1);*/
-
-
-		/*boolean enrolled;
-		Student[] students;
-		course1.enrolStudent(student1); //true
-
-		enrolled = course1.enrolStudent(student2); // true
-
-		course1.aDayPasses();
-		students = course1.getStudents();
-		System.out.println(students);
-		System.out.println("Size" + course1.getSize());
-
-		course1.aDayPasses();
-		enrolled = course1.enrolStudent(student3);
-		students = course1.getStudents();
-		System.out.println("Size" + course1.getSize());*/
-
-		Student[] students;
-		students = course1.getStudents();
-		System.out.println("Size " + course1.getSize());
-		course1.enrolStudent(student1);
-		students = course1.getStudents();
-		System.out.println("Size " + course1.getSize());
-
-
-
-
+	
 
 	}
 }
